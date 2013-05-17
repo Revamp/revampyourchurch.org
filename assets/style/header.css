@@ -1,7 +1,7 @@
 header {
   height: 50px;
-  background: #222;
-  color: white;
+  background: #eee;
+  color: #222;
 }
 
 header a {
@@ -21,7 +21,7 @@ header a {
 }
 
 header a:hover, header a:focus {
-  background: black;
+  background: #aaa;
 }
 
 header .divider {

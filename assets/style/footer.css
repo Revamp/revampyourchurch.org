@@ -1,6 +1,10 @@
+html {
+  background: #222;
+}
+
 footer {
   text-align: center;
   padding: 10px;
-  background: #1B2B4F;
+  background: #222;
   color: white;
 }

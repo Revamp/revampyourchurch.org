@@ -48,5 +48,5 @@ function slider(slide) {
     }
     document.getElementById('slide-'+slide).classList.add('selected');
   }
-  slideTimeout = setTimeout(nextSlide, 5000);
+  slideTimeout = setTimeout(nextSlide, 10000);
 }
