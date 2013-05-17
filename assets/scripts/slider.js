@@ -1,18 +1,12 @@
+var slideTimeout;
+
 document.onclick = function (event) {
   if (event.target.hasAttribute('data-slide') && document.getElementById('slide-'+event.target.getAttribute('data-slide'))) {
     slider(event.target.getAttribute('data-slide'));
   } else if (event.target.classList.contains('right') | event.target.parentNode.classList.contains('right')) {
-    if (document.querySelector('.selected') && document.querySelector('.selected').nextElementSibling) {
-      slider(document.querySelector('.selected').nextElementSibling.id.replace(/slide-/, ''));
-    } else {
-      slider(document.querySelector('.slider .slides').firstElementChild.id.replace(/slide-/, ''));      
-    }
+    nextSlide();
   } else if (event.target.classList.contains('left') | event.target.parentNode.classList.contains('left')) {
-    if (document.querySelector('.selected') && document.querySelector('.selected').previousElementSibling) {
-      slider(document.querySelector('.selected').previousElementSibling.id.replace(/slide-/, ''));
-    } else {
-      slider(document.querySelector('.slider .slides').lastElementChild.id.replace(/slide-/, ''));      
-    }
+    previousSlide();
   }
 }
 
@@ -24,7 +18,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+function nextSlide() {
+  if (document.querySelector('.selected') && document.querySelector('.selected').nextElementSibling) {
+    slider(document.querySelector('.selected').nextElementSibling.id.replace(/slide-/, ''));
+  } else {
+    slider(document.querySelector('.slider .slides').firstElementChild.id.replace(/slide-/, ''));      
+  }
+}
+
+function previousSlide() {
+  if (document.querySelector('.selected') && document.querySelector('.selected').previousElementSibling) {
+    slider(document.querySelector('.selected').previousElementSibling.id.replace(/slide-/, ''));
+  } else {
+    slider(document.querySelector('.slider .slides').lastElementChild.id.replace(/slide-/, ''));      
+  }
+}
+
 function slider(slide) {
+  clearTimeout(slideTimeout);
   if (document.getElementById('slide-'+slide)) {
     if (document.querySelector('.selected')) {
       document.querySelector('.selected').classList.remove('selected');
@@ -37,4 +48,5 @@ function slider(slide) {
     }
     document.getElementById('slide-'+slide).classList.add('selected');
   }
+  slideTimeout = setTimeout(nextSlide, 5000);
 }

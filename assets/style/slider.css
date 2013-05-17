@@ -27,7 +27,7 @@
   top: 0;
   bottom: 0;
   position: absolute;
-  opacity: 0;
+  opacity: .99;
   text-align: left;
   color: #222;
   transform: translateX(-100%);
@@ -191,4 +191,36 @@
 
 .slider nav span.selected {
   opacity: 1;
+}
+
+@media mobile, (max-width: 860px) {
+  .slider .slides div {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .slider .slides > div > div:first-child {
+    display: none;
+  }
+  .slider .buttons .left, .slider .buttons .right {
+    transform: none;
+      -moz-transform: none;
+      -webkit-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+    opacity: 1;  
+  }
+  .slider nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    transform: none;
+      -moz-transform: none;
+      -webkit-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+    opacity: 1;
+    border: none;
+  }
 }
