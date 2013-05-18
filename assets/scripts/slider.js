@@ -1,4 +1,4 @@
-var slideTimeout, slider, slideContainer;
+var slideSpeed, slideTimeout, slider, slideContainer;
 
 document.onclick = function (event) {
   if (event.target.hasAttribute('data-slide') && document.getElementById('slide-'+event.target.getAttribute('data-slide'))) {
@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
     slider = document.querySelector('.slider');
     
     // Create Slider
+    if (slider.hasAttribute('data-speed')) {
+      slideSpeed = slider.getAttribute('data-speed');
+    } else {
+      slideSpeed = 10000;
+    }
     slideContainer = document.createElement('div');
     slideContainer.classList.add('slides'); 
     var extraContainer = document.createElement('div');
     var navButtons = document.createElement('nav');
-    var navList = document.createElement('nav')  
+    var navList = document.createElement('nav')
     
     while (slider.firstElementChild) {
       if (slider.getAttribute('nav-list') != 'false') {
@@ -81,5 +86,5 @@ function slideNav(slide) {
     }
     document.getElementById('slide-'+slide).classList.add('selected');
   }
-  slideTimeout = setTimeout(nextSlide, 10000);
+  slideTimeout = setTimeout(nextSlide, slideSpeed);
 }
