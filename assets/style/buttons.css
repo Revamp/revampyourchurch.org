@@ -1,0 +1,28 @@
+a[data-type="button"], button, input[type="button"] {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  background: #1B2B4F;
+  text-decoration: none;
+  color: white;
+  border: none;
+  display: inline-block;
+  transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+a[data-type="button"][data-style="inverted"], button[data-style="inverted"], input[type="button"][data-style="inverted"] {
+  background: white;
+  color: #1B2B4F;
+}
+
+a[data-type="button"]:active, button:active, input[type="button"]:active {
+  transform: scale(2,-2);
+    -moz-transform: scale(2,-2);
+    -webkit-transform: scale(2,-2);
+    -o-transform: scale(2,-2);
+    -ms-transform: scale(2,-2);
+  opacity: 0;
+}
