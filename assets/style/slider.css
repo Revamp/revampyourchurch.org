@@ -74,7 +74,7 @@
   max-width: 600px;
 }
 
-.slider .buttons .left, .slider .buttons .right {
+.slider .slider-nav-buttons .left, .slider .slider-nav-buttons .right {
   padding: 5px;
   position: absolute;
   top: 40%;
@@ -97,7 +97,7 @@
     -ms-transition: opacity .3s, -ms-transform .3s ease;
 }
 
-.slider .buttons .left {
+.slider .slider-nav-buttons .left {
   left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -105,7 +105,7 @@
   padding-left: 0;
 }
 
-.slider .buttons .right {
+.slider .slider-nav-buttons .right {
   right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -113,7 +113,7 @@
   padding-right: 0;
 }
 
-.slider .buttons img {
+.slider .slider-nav-buttons img {
   height: 30px;
   transition: transform .3s;
     -moz-transition: -moz-transform .3s;
@@ -122,7 +122,7 @@
     -ms-transition: -ms-transform .3s;
 }
 
-.slider .buttons .right:hover img {
+.slider .slider-nav-buttons .right:hover img {
   transform: translateX(5px);
     -moz-transform: translateX(5px);
     -webkit-transform: translateX(5px);
@@ -130,7 +130,7 @@
     -ms-transform: translateX(5px);
 }
 
-.slider .buttons .left:hover img {
+.slider .slider-nav-buttons .left:hover img {
   transform: translateX(-5px);
     -moz-transform: translateX(-5px);
     -webkit-transform: translateX(-5px);
@@ -138,7 +138,7 @@
     -ms-transform: translateX(-5px);
 }
 
-.slider:hover .buttons .left, .slider:focus .buttons .left, .slider:active .buttons .left, .slider:hover .buttons .right, .slider:focus .buttons .right, .slider:active .buttons .right {
+.slider:hover .slider-nav-buttons .left, .slider:focus .slider-nav-buttons .left, .slider:active .slider-nav-buttons .left, .slider:hover .slider-nav-buttons .right, .slider:focus .slider-nav-buttons .right, .slider:active .slider-nav-buttons .right {
   transform: none;
     -moz-transform: none;
     -webkit-transform: none;
@@ -147,7 +147,7 @@
   opacity: 1;
 }
 
-.slider nav {
+.slider .slider-nav-list {
   position: absolute;
   bottom: 0;
   border: 2px solid white;
@@ -156,6 +156,7 @@
   border-top-right-radius: 20px;
   display: inline-block;
   padding: 5px;
+  padding-bottom: 0;
   opacity: 0;
   background: black;
   transform: scale(2, -1);
@@ -170,7 +171,7 @@
     -ms-transition: opacity .5s, -ms-transform .3s ease;
 }
 
-.slider:hover nav, .slider:focus nav, .slider:active nav {
+.slider:hover .slider-nav-list, .slider:focus .slider-nav-list, .slider:active .slider-nav-list {
   transform: none;
     -moz-transform: none;
     -webkit-transform: none;
@@ -179,20 +180,20 @@
   opacity: 1;
 }
 
-.slider nav span:first-child {
+.slider .slider-nav-list span:first-child {
   margin-left: 10px;
 }
 
-.slider nav span:last-child {
+.slider .slider-nav-list span:last-child {
   margin-right: 10px;
 }
 
-.slider nav span {
+.slider .slider-nav-list span {
   height: 1px;
   width: 1px;
   display: inline-block;
   padding: 4px;
-  margin: 4px 1px; 
+  margin: 4px 2px; 
   background: white;
   border-radius: 100%;
   opacity: .2;
@@ -204,11 +205,11 @@
     -ms-transition: opacity .5s;
 }
 
-.slider nav span:hover, .slider nav span:focus {
+.slider .slider-nav-list span:hover, .slider .slider-nav-list span:focus {
   opacity: .7;
 }
 
-.slider nav span.selected {
+.slider .slider-nav-list span.selected {
   opacity: 1;
 }
 
@@ -226,7 +227,7 @@
   .slider .slides > div > div:first-child {
     display: none;
   }
-  .slider .buttons .left, .slider .buttons .right {
+  .slider .slider-nav-buttons .left, .slider .slider-nav-buttons .right {
     transform: none;
       -moz-transform: none;
       -webkit-transform: none;
@@ -234,7 +235,7 @@
       -ms-transform: none;
     opacity: 1;  
   }
-  .slider nav {
+  .slider .slider-nav-list {
     padding: 0;
     width: 100%;
     left: 0;
@@ -249,9 +250,9 @@
     opacity: 1;
     border: none;
   }
-  .slider nav span {
+  .slider .slider-nav-list span {
     padding: 8px;
-    margin: 10px 1px;   
+    margin: 10px 2px;   
   }
 }
 
@@ -259,6 +260,6 @@
   .slider .slides > div {
     padding: 0;
   }
-  .slider .buttons {
+  .slider .slider-nav-buttons {
     display: none;
   }
