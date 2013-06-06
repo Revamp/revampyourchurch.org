@@ -11,29 +11,17 @@
   
   <form>
     <div class="box"> 
-      <h1>Contact Form:</h1>        
-      <label>
-        <span>Organization</span>
-        <input type="text" class="input_text" name="organization" id="organization"/>
-      </label>
-      <label>
-        <span>Email</span>
-        <input type="text" class="input_text" name="email" id="email"/>
-      </label>
-      <label>
-        <span>Subject</span>
-        <input type="text" class="input_text" name="subject" id="subject"/>
-      </label>
-      <label>
-        <span>Message</span>
-        <textarea class="message" name="feedback" id="feedback"></textarea>
-        <input type="button" class="button" value="Submit Form"/>
-      </label>
+      <h1>Contact Us:</h1>
+      <input type="text" name="organization" id="organization" placeholder="Revamp" />
+      <input type="email" name="email" id="email" placeholder="revamp@revamp.co.nf" />
+      <input type="text" name="subject" id="subject" placeholder="Service Inquiry" />
+      <textarea name="feedback" id="feedback" placeholder="I am contacting you because..." ></textarea>
+      <div class="buttons">
+        <input type="submit" value="Contact" />
+      </div>
     </div>
   </form>
-  <div class="left">  </div>
-  <div class="right"> </div>
-  
+    
   <?php include '../assets/include/footer.php'; ?>
   
 </body>    
