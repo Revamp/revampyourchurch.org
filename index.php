@@ -11,7 +11,7 @@
   <div class="slider">
     <div id="slide-1" style="color: white; background: black;">
       <div>
-        <img src="assets/images/fast-paced.jpg" alt="Illustration" />
+        <img src="/assets/images/fast-paced.jpg" alt="Illustration" />
       </div>
       <div>
         <h1>Revamp your church!</h1>
@@ -23,7 +23,7 @@
     </div>
     <div id="slide-2" style="color: white; background: #1B2B4F;" class="right">
       <div>
-        <img src="assets/images/web.jpg" alt="The world-wide web." />
+        <img src="/assets/images/web.jpg" alt="The world-wide web." />
       </div>
       <div>
         <h1>Website Design</h1>
@@ -35,7 +35,7 @@
     </div>
     <div id="slide-3">
       <div>
-        <img src="assets/images/visual design.jpg" alt="The world-wide web." />
+        <img src="/assets/images/visual%20design.jpg" alt="The world-wide web." />
       </div>
       <div>
         <h1>Visual Design</h1>

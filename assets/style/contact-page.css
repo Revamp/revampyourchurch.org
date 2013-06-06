@@ -7,6 +7,11 @@
   color: #222;
 }
 
+.box input, .box textarea {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .box input[type='text'], .box input[type='email'], .box textarea {
   display: block;
   padding: 8px;
@@ -17,8 +22,9 @@
   border-radius: 10px;
   border: 2px solid transparent;
   outline: none;
-  font-weight: bold;
-  font-size: 16px;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   transition: all .3s;
     -moz-transition: all .3s;
     -webkit-transition: all .3s;
