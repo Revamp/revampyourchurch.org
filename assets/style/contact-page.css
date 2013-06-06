@@ -31,6 +31,16 @@
   border-color: #333;
 }
 
+.box input[type='email']:invalid {
+  border-color: red;
+  box-shadow: 0 0 8px red;
+}
+
+.box input[type='email']:valid {
+  border-color: green;
+  box-shadow: 0 0 8px green;
+}
+
 .box textarea {
   width: 100%;
   resize: vertical;
