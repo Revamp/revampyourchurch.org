@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Contact Revamp</title>
-  <link type="text/css" rel="stylesheet" href="ContactStylesheet.css"/>
   <?php include '../assets/include/head-items.php'; ?>
+  <link type="text/css" rel="stylesheet" href="/assets/style/contact-page.css"/>
 </head>
 <body>
 
