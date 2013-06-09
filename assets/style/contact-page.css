@@ -1,0 +1,58 @@
+.box {
+  padding: 20px;
+}
+
+.box h1 {
+  margin: 5px 0;
+  color: #222;
+}
+
+.box input, .box textarea {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.box input[type='text'], .box input[type='email'], .box textarea {
+  display: block;
+  padding: 8px;
+  margin: 10px 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.box input[type='text']:focus, .box input[type='email']:focus, .box textarea:focus {
+  background: #fff;
+  color: #222;
+  border-color: #333;
+}
+
+.box input[type='email']:invalid {
+  border-color: red;
+  box-shadow: 0 0 8px red;
+}
+
+.box input[type='email']:valid {
+  border-color: green;
+  box-shadow: 0 0 8px green;
+}
+
+.box textarea {
+  width: 100%;
+  resize: vertical;
+  height: 400px;
+}
+
+.box .buttons {
+  text-align: right;
+}

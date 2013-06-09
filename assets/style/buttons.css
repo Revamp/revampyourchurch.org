@@ -1,4 +1,4 @@
-a[data-type="button"], button, input[type="button"] {
+a[data-type="button"], button, input[type="button"], input[type="submit"], input[type="reset"] {
   padding: 10px;
   border-radius: 5px;
   outline: none;
@@ -18,7 +18,7 @@ a[data-type="button"][data-style="inverted"], button[data-style="inverted"], inp
   color: #1B2B4F;
 }
 
-a[data-type="button"]:active, button:active, input[type="button"]:active {
+a[data-type="button"]:active, button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active {
   transform: scale(2,-2);
     -moz-transform: scale(2,-2);
     -webkit-transform: scale(2,-2);
