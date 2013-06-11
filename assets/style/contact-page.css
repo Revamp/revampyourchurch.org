@@ -7,7 +7,7 @@
   color: #222;
 }
 
-.box input, .box textarea {
+.box input, .box textarea, button {
   font-weight: bold;
   font-size: 16px;
 }
@@ -55,4 +55,33 @@
 
 .box .buttons {
   text-align: right;
+}
+
+.msg {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  background: blue;
+  opacity: 0;
+  display: none;
+  transform: scale(-1, -5);
+    -moz-transform: scale(-1, -5);
+  transition: transform .3s, opacity .3s, .3s display 0s;
+    -moz-transition: -moz-transform .3s, opacity .3s, .3s display 0s;
+    -webkit-transition: -webkit-transform .3s, opacity .3s, .3s display 0s;
+    -o-transition: -o-transform .3s, opacity .3s, .3s display 0s;
+    -ms-transition: -ms-transform .3s, opacity .3s, .3s display 0s;
+}
+
+.msg.shown {
+  opacity: 1;
+  display: block;
+  transform: none;
+    -moz-transform: none;
+  transition: transform .3s, opacity .3s, 0s display 0s;
+    -moz-transition: -moz-transform .3s, opacity .3s, 0s display 0s;
+    -webkit-transition: -webkit-transform .3s, opacity .3s, 0s display 0s;
+    -o-transition: -o-transform .3s, opacity .3s, 0s display 0s;
+    -ms-transition: -ms-transform .3s, opacity .3s, 0s display 0s;
 }
